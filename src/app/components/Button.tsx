@@ -25,8 +25,8 @@ const Button: FC<ButtonProps> = ({
       <button
         className={`
           ${buttonStyle} 
-          rounded-[20px] 
-          py-4 tablet:py-5 
+          rounded-[15px] 
+          py-2 tablet:py-3  
           px-8 text-[5vw] 
           sm:text-[4.5vw] 
           md:text-[4vw] 

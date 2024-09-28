@@ -160,7 +160,7 @@ const Tutorial: React.FC = () => {
           <Button
             variant={currentSlide === 2 ? "solid" : "outline"}
             onClick={
-              currentSlide === 2 ? () => router.push("/form") : handleContinue
+              currentSlide === 2 ? () => router.push("/multiform") : handleContinue
             }
             backgroundColor="white"
           >

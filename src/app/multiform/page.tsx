@@ -42,10 +42,18 @@ const MultiForm: React.FC = () => {
     }
   };
 
+  const contentRef = useRef<HTMLDivElement>(null); // Create a ref for content
+
   const handleEmailSubmit = () => {
     if (email && !emailError) {
       localStorage.setItem("userName", name);
-      router.push("/result");
+      gsap.to(contentRef.current, {
+        opacity: 0,
+        duration: 0.5,
+        onComplete: () => {
+          router.push("/result");
+        }
+      });
     }
   };
 

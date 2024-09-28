@@ -93,7 +93,7 @@ const Tutorial: React.FC = () => {
             },
           }}
           modules={[Pagination]}
-          className="mt-40"
+          className="my-10 sm:my-20 md:my-30 lg:my-40"
           onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
         >
           <SwiperSlide>

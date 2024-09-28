@@ -10,15 +10,23 @@ import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
 import Vector from "../../public/assets/Vector4.png";
+import { useRouter } from "next/navigation";
 
 const Home: React.FC = () => {
+  const router = useRouter();
   const lottieRef = useRef<any>(null);
   const textRefs = useRef<(HTMLParagraphElement | null)[]>([]);
   const [loading, setLoading] = useState(true);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   const handleContinue = () => {
-    const formSection = document.getElementById("form-section");
-    formSection?.scrollIntoView({ behavior: "smooth" });
+    gsap.to(contentRef.current, {
+      opacity: 0,
+      duration: 0.5,
+      onComplete: () => {
+        router.push("/tutorial");
+      }
+    });
   };
 
   const handleRefresh = () => {
@@ -44,7 +52,7 @@ const Home: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 50);
     return () => clearTimeout(timer);
   }, []);
 
@@ -87,6 +95,7 @@ const Home: React.FC = () => {
         </>
       )}
   
+      <div ref={contentRef} className={`absolute w-full h-full transition-opacity duration-500 ${loading ? 'opacity-0' : 'opacity-100'}`}>
         <div className="absolute w-full h-full bg-gradient-to-b from-zinc-900 via-gray-800 to-darkBg backdrop-blur-lg opacity-8 flex flex-col justify-between">
           <div className="p-4 phone:p-6 flex-grow relative max-w-screen-xl mx-auto">
             <div className="my-5">
@@ -141,9 +150,9 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
     </div>
   );
 };
 
 export default Home;
-

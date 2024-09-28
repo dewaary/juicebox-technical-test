@@ -43,7 +43,7 @@ const InputForm: React.FC<InputFormProps> = ({ placeholder, onSubmit, onChange }
         placeholder={placeholder}
         value={value}
         onChange={handleInputChange}
-        className="flex-grow outline-none bg-transparent text-gray-300 px-4"
+              className="flex-grow outline-none bg-transparent text-gray-300 px-4 pr-10"
       />
       <button
         onClick={handleSubmit}

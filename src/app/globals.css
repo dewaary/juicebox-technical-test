@@ -25,3 +25,33 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Sohne Regular */
+@font-face {
+  font-family: 'Sohne';
+  src: url('/fonts/Sohne/Sohne-Buch.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* PP Agrandir Regular */
+@font-face {
+  font-family: 'PPAgrandir';
+  src: url('/fonts/Agrandir/PPAgrandir-Medium.woff2') format('truetype');
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'Bagoss';
+  src: url('/fonts/Bagoss/BagossTRIALVF.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Graphik Medium */
+@font-face {
+  font-family: 'Graphik';
+  src: url('/src/app/fonts/Graphik/Graphik-Medium.woff2') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}

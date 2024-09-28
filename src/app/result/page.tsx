@@ -12,6 +12,7 @@ import animationData from "../../../public/assets/JB2G_Lottie.json";
 
 const Result: React.FC = () => {
   const router = useRouter();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const lottieRef = useRef<any>(null);
   const [name, setName] = useState("");
   const [loading, setLoading] = useState(true);

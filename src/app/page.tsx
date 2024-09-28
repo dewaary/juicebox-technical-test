@@ -14,6 +14,7 @@ import { useRouter } from "next/navigation";
 
 const Home: React.FC = () => {
   const router = useRouter();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const lottieRef = useRef<any>(null);
   const textRefs = useRef<(HTMLParagraphElement | null)[]>([]);
   const [loading, setLoading] = useState(true);
@@ -119,32 +120,34 @@ const Home: React.FC = () => {
                   className="w-[90%] sm:w-[70%] lg:w-[50%] rotating-image"
                 />
 
-                <p
-                  ref={(el) => (textRefs.current[0] = el)}
+                <p 
+                  ref={(el) => {
+                    textRefs.current[0] = el;
+                }} 
                   className="absolute top-[15%] left-[0.05%] break-words font-sohne text-left phone:text-[3.5vw] tablet:text-sm laptop:text-base font-normal"
                 >
                   WA businesses feel confident about future growth
                 </p>
                 <p
-                  ref={(el) => (textRefs.current[1] = el)}
+                  ref={(el) => {textRefs.current[1] = el}}
                   className="absolute bottom-[60%] right-[0.05%] break-words font-sohne text-left phone:text-[3.5vw] tablet:text-sm laptop:text-base font-normal"
                 >
-                  AI can't replace creativity
+                  AI can&apos;t replace creativity
                 </p>
                 <p
-                  ref={(el) => (textRefs.current[2] = el)}
+                  ref={(el) => {textRefs.current[2] = el}}
                   className="absolute bottom-[50%] left-[0.05%] break-words font-sohne text-left phone:text-[3.5vw] tablet:text-sm laptop:text-base font-normal"
                 >
                   Sales measure true success
                 </p>
                 <p
-                  ref={(el) => (textRefs.current[3] = el)}
+                  ref={(el) => {textRefs.current[3] = el}}
                   className="absolute bottom-[28%] right-[0.05%] break-words font-sohne text-left phone:text-[3.5vw] tablet:text-sm laptop:text-base font-normal"
                 >
                   Human connection drives WA business
                 </p>
                 <p
-                  ref={(el) => (textRefs.current[4] = el)}
+                  ref={(el) => {textRefs.current[4] = el}}
                   className="absolute bottom-[2%] left-[0.05%] phone:w-[60%] tablet:w-[50%] break-words font-sohne phone:text-[3.5vw] tablet:text-sm laptop:text-base font-normal"
                 >
                   <span>The primary barrier to digital</span>

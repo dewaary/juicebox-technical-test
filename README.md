@@ -2,7 +2,17 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+First after clone a repository, your run in terminal
+
+```bash
+npm install
+# or
+yarn install
+```
+
+for the genarte node_modules and install the all package
+
+next step, run the development server:
 
 ```bash
 npm run dev

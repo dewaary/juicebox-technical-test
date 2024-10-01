@@ -80,7 +80,7 @@ const Home: React.FC = () => {
   }, [loading]);
 
   return (
-    <div className="flex justify-center items-center bg-darkBg h-screen relative">
+    <div className="flex justify-center items-center bg-darkBg h-screen relative text-white">
       {loading && (
         <>
           <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-75 z-50">
